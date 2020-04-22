@@ -1,0 +1,5 @@
+docker run -p 5432:5432 --name yourContainerName -e POSTGRES_PASSWORD=yourPassword -d postgres:9.6.17
+
+docker exec <postgres_container_name> pg_dump -U postgres postgres > backup.sql
+
+docker exec -it postgres_db_1 psql -U postgres
